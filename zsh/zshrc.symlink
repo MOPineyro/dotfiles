@@ -4,6 +4,54 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Code
 
+# antigensettings
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+setopt autocd
+# . /Users/mopineyro/.dotfiles/z.sh
+source /Users/mopineyro/.dotfiles/antigen.zsh
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+
+antigen bundle git
+antigen bundle gitfast
+antigen bundle git-extras
+# antigen bundle z
+# # antigen bundle zsh-autosuggestions
+antigen bundle cloudapp
+# antigen bundle npm
+antigen bundle brew
+# antigen bundle osx
+antigen bundle node
+antigen bundle asdf
+antigen bundle meteor
+antigen bundle rails
+#
+# # Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+#
+# Load the theme.
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
+# Tell Antigen that you're done.
+antigen apply
+#
+
+# ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+# source <(antibody init)
+# antibody bundle < /Users/mopineyro/.dotfiles/zsh/plugins.txt
+# plugins=(
+#   git
+#   ruby
+# )
+# oh -my-zsh
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -48,3 +96,5 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+source /Users/mopineyro/.asdf/asdf.sh

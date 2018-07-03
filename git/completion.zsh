@@ -3,7 +3,9 @@
 # tosses it, at least).
 completion='$(brew --prefix)/share/zsh/site-functions/_git'
 
-if test -f $completion
-then
-  source $completion
-fi
+# if test -f $completion
+# then
+#   source $completion
+#   source /usr/local/etc/bash_completion.d/git-completion.bash
+#   source /usr/local/etc/bash_completion.d/git-prompt.sh
+# fi

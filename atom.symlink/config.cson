@@ -40,7 +40,6 @@
       "metrics"
       "react"
       "linter-rubocop"
-      "tree-view"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -54,13 +53,15 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "one-light-ui"
-      "one-light-syntax"
+      "one-dark-ui"
+      "rainglow"
     ]
   editor:
-    fontFamily: "Menlo"
+    fontFamily: "Gintronic"
     invisibles: {}
     showIndentGuide: true
+    showInvisibles: true
+    showLineNumbers: false
     softWrapAtPreferredLineLength: true
   "go-plus":
     panel:
@@ -79,6 +80,8 @@
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
+  rainglow:
+    SelectSyntax: "juicy-contrast-rainglow-syntax"
   "release-notes":
     viewedVersion: "0.89.0"
   "spell-check":
