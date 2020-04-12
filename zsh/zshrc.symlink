@@ -11,7 +11,7 @@ setopt autocd
 # . /Users/mopineyro/.dotfiles/z.sh
 source /Users/mopineyro/.dotfiles/antigen.zsh
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda vcs)
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Load the oh-my-zsh's library.
@@ -98,3 +98,10 @@ bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
 source /Users/mopineyro/.asdf/asdf.sh
+
+alias reload!="source $HOME/.zshrc"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
+
+export VAULT_ADDR=https://vault.simplebet-infra.net:8200

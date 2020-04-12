@@ -16,6 +16,8 @@
       beautify_on_save: true
     ruby:
       default_beautifier: "Ruby Beautify"
+  "atom-ide-ui":
+    "debugger-exceptionBreakpointsCollapsed": false
   "autocomplete-modules":
     babelPluginModuleResolver: true
     webpack: true
@@ -40,6 +42,7 @@
       "metrics"
       "react"
       "linter-rubocop"
+      "linter"
     ]
     followSymlinks: false
     hideGitIgnoredFiles: true
@@ -54,16 +57,17 @@
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "rainglow"
+      "atomic-monokai-pro-syntax"
     ]
   editor:
-    fontFamily: "Gintronic"
+    fontFamily: "Gintronic-Medium"
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
-    showLineNumbers: false
     softWrapAtPreferredLineLength: true
   "go-plus":
+    config: {}
+    format: {}
     panel:
       currentHeight: "24.11111111111111vh"
     panelDisplayMode: "closed"
@@ -73,6 +77,7 @@
   "linter-rubocop": {}
   "linter-ui-default":
     panelHeight: 301
+  minimap: {}
   nuclide:
     "atom-ide-code-format":
       formatOnType: false

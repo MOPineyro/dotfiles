@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "simplebet-staging"
+  cluster:
+    server: "https://rancher.simplebet-infra.net/k8s/clusters/c-mxb7m"
+
+users:
+- name: "simplebet-staging"
+  user:
+    token: "kubeconfig-u-rdkasijaqa:m79zpjrbsp562qt9ss9hvltpzrr6t88znv6xbqb4vvjs5qt8xcx7rh"
+
+contexts:
+- name: "simplebet-staging"
+  context:
+    user: "simplebet-staging"
+    cluster: "simplebet-staging"
+
+current-context: "simplebet-staging"

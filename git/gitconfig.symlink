@@ -9,6 +9,12 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+        newb    = "!f() { branchName=$1; git checkout -b \"mopineyro/${branchName}\"; }; f"
+        newf    = "!f() { branchName=$1; git checkout -b \"feature/${branchName}\"; }; f"
+        plbase  = "!f() { branchName=${1-master}; git checkout $branchName && git pull && git checkout - && git rebase -i $branchName; }; f"
+	assume-unchanged = update-index --assume-unchanged
+	assume-unchanged = update-index --assume-unchanged
+	assume-unchanged = update-index --assume-unchanged
 [color]
       	branch = auto
       	diff = auto
@@ -47,3 +53,5 @@
 [user]
 	name = Manuel Pineyro
   email = manuel.o.pineyro@gmail.com
+[credential]
+	helper = osxkeychain
