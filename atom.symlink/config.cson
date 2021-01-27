@@ -1,4 +1,7 @@
 "*":
+  _dart:
+    _firstRun: true
+    _version: "1.0.1"
   "atom-beautify":
     crystal:
       beautify_on_save: true
@@ -16,11 +19,15 @@
       beautify_on_save: true
     ruby:
       default_beautifier: "Ruby Beautify"
+  "atom-gpg":
+    gpgExecutable: "/usr/local/bin/gpg"
   "atom-ide-ui":
     "debugger-exceptionBreakpointsCollapsed": false
   "autocomplete-modules":
     babelPluginModuleResolver: true
     webpack: true
+  "autocomplete-plus":
+    autoActivationDelay: 500
   core:
     closeDeletedFileTabs: true
     closeEmptyWindows: false
@@ -59,6 +66,8 @@
       "one-dark-ui"
       "atomic-monokai-pro-syntax"
     ]
+  dart:
+    sdkLocation: "/Users/mopineyro/.asdf"
   editor:
     fontFamily: "Gintronic-Medium"
     invisibles: {}

@@ -18,6 +18,9 @@ asdf_update_maven_and_gradle_home() {
 }
 asdf_update_maven_and_gradle_home
 
+# Set JAVA_HOME
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 export ANT_HOME=/usr/local/opt/ant
 # export ANDROID_HOME=/usr/local/share/android-sdk/
 # export ANDROID_NDK_HOME=/usr/local/share/android-ndk
@@ -28,6 +31,7 @@ export ANDROID_HOME=$ANDROID_SDK_ROOT
 export PATH=$ANT_HOME/bin:$PATH
 export PATH=$MAVEN_HOME/bin:$PATH
 export PATH=$GRADLE_HOME/bin:$PATH
+# export PATH=$JAVA_HOME/bin:$PATH
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 # export PATH=$ANDROID_HOME/platform-tools:$PATH
 # export PATH=$ANDROID_HOME/build-tools/19.1.0:$PATH

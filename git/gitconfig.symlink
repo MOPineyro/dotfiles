@@ -52,6 +52,15 @@
         default = simple
 [user]
 	name = Manuel Pineyro
-  email = manuel.o.pineyro@gmail.com
+	email = manuel.o.pineyro@gmail.com
 [credential]
 	helper = osxkeychain
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
